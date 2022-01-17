@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>648</x>
+      <y>280</y>
+      <w>928</w>
+      <h>1776</h>
+    </coordinates>
+    <panel_attributes>UI Tier
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>344</y>
+      <w>464</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>GetSpecatateGameRoute
+--
+-LOG:Logger
++INVALID_GAME_MSG:String
+-templateEngine:TemplateEngine
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSpectateGameRoute(templateEngine:TemplateEngine, gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>368</y>
+      <w>336</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>GetSpectateStopWatchingRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSpectateStopWatchingRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1024</x>
+      <y>512</y>
+      <w>432</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>GetGameRoute
+--
+-LOG:Logger
++ViewMode:enum
++ATTR_TITLE:String
++ATTR_CURRENT_USER:String
++ATTR_VIEW_MODE:String
++ATTR_MODE_OPTIONS:String
++ATTR_RED_PLAYER:String
++ATTR_WHITE_PLAYER:String
++ATTR_ACTIVE_COLOR:String
++ATTR_BOARD:String
++ATTR_MESSAGE:String
++TITLE:String
++GAME_VIEW:String
+-templateEngine:TemplateEngine
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetGameRoute(templateEngine:TemplateEngine, gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>512</y>
+      <w>328</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>PostSpectateCheckTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
++MOVE_COUNT_KEY:String
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSpectateCheckTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>656</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>GetSignInRoute
+--
+-LOG:Logger
++TITLE:String
+-templateEngine:TemplateEngine
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSignInRoute(templateEngine:TemplateEngine)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>824</y>
+      <w>568</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>GetHomeRoute
+--
+-LOG:Logger
++WELCOME_MSG:Message
++ATTR_TITLE:String
++ATTR_MESSAGE:String
++ATTR_PLAYER_SIGNIN:String
++ATTR_NUM_PLAYERS:String
++ATTR_CURRENT_USER:String
++ATTR_PLAYER_LIST:String
++ATTR_GAME_LIST:String
++ATTR_ONE_PLAYER:String
++PLAYER_SESSION_KEY:String
++TIMEOUT_SESSION_KEY:String
++VIEW_NAME:String
++TITLE:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetGameRoute(templateEngine:TemplateEngine, gameManager:GameManager, playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1264</x>
+      <y>824</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>PostBackUpMoveRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostBackUpMoveRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1264</x>
+      <y>952</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>PostResignGameRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostResignGameRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1264</x>
+      <y>1080</y>
+      <w>224</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>PostCheckTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostCheckTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1376</y>
+      <w>288</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>PostSubmitTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSubmitTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1496</y>
+      <w>288</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>PostValidateMoveRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostValidateMoveRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>1184</y>
+      <w>552</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>PostHomeRoute
+--
+-LOG:Logger
+-START_ERROR:String
+-SPECTATE_ERROR:String
+-SPECTATE_MODE:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostHomeRoute(gameManager:GameManager,templateEngine:TemplateEngine,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>1376</y>
+      <w>440</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>PostSignInRoute
+--
+-LOG:Logger
+-VALID_ROUTE:String
+-INVALID_ROUTE:String
+-PLAYER_NAME_ATTR:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSignInRoute(templateEngine:TemplateEngine,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object
+-error(vm:Map&lt;String,Object&gt;,message:String):ModelAndView
+-valid(vm:Map&lt;String,Object&gt;):ModelAndView</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>1576</y>
+      <w>392</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>PostSignOutRoute
+--
+-LOG:Logger
++SIGNOUT_MSG:Message
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSignOutRoute(gameManager:GameManager,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>1728</y>
+      <w>584</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>WebServer
+--
+-LOG:Logger
++HOME_URL
++SIGNIN_URL
++SIGNOUT_URL
++GAME_URL
++VALIDATE_MOVE_URL
++SUBMIT_TURN_URL
++BACKUP_MOVE_URL
++RESIGN_GAME_URL
++CHECK_TURN_URL
++SPECTATE_GAME_URL
++SPECTATE_STOP_WATCHING_URL
++SPECTATE_CHECK_TURN_URL
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gson:Gson
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++WebServer(gameManager:GameManager,playerLobby:PlayerLobby,gson:Gson,templateEngine:TemplateEngine)
++initialize():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>240</y>
+      <w>664</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;810.0;10.0;810.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>240</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;170.0;200.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>368</y>
+      <w>88</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0;90.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>536</y>
+      <w>440</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;530.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>624</y>
+      <w>88</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;420.0;90.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>952</y>
+      <w>80</w>
+      <h>328</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0;80.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>1160</y>
+      <w>680</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>864</y>
+      <w>48</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>1016</y>
+      <w>48</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1240</x>
+      <y>1160</y>
+      <w>24</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1240</x>
+      <y>1240</y>
+      <w>256</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>210.0;330.0;300.0;330.0;300.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>1256</y>
+      <w>80</w>
+      <h>600</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;730.0;80.0;730.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>1624</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>224</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Application Tier&gt;&gt;
+GameManager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>512</x>
+      <y>312</y>
+      <w>168</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0;90.0;830.0;190.0;830.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>968</y>
+      <w>104</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;400.0;110.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1280</y>
+      <w>104</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0;110.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1520</y>
+      <w>104</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;110.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1640</y>
+      <w>104</w>
+      <h>328</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0;110.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>296</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Application Tier&gt;&gt;
+PlayerLobby</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

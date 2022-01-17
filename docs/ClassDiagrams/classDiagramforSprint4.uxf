@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>42</x>
+      <y>77</y>
+      <w>385</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>Application Tier
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>448</x>
+      <y>84</y>
+      <w>630</w>
+      <h>1834</h>
+    </coordinates>
+    <panel_attributes>Model Tier
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1274</x>
+      <y>63</y>
+      <w>812</w>
+      <h>1554</h>
+    </coordinates>
+    <panel_attributes>UI Tier
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>119</y>
+      <w>329</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>GameManager
+--
+-lobby: PlayerLobby
+-idCount: int
+-playerGameMap: HashMap&lt;Player, CheckersGame&gt;
+-gameIDMap: HashMap&lt;Integer, CheckersGame&gt;
+--
+&lt;&lt;Constructor&gt;&gt;
++GameManager(lobby:PlayerLobby)
++createGame(challenger: Player, opponentStr: String): CheckersGame
++getGame(player:Player): CheckersGame
++getGame(player:Player, gameID:int): CheckersGame
++getActiveGames():Collection&lt;String[]&gt;
++makeAIMove(currentPlayer:Player):void
++resign(resignPlayer:Player):boolean
++gameOver(game:CheckersGame): void
++quit(player:Player):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>364</y>
+      <w>329</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>PlayerLobby
+--
++NAME_TAKEN_MSG: String
++NAME_INVALID_MSG: String
+-currentPlayers: Map&lt;String, Player&gt;
++NameValidation: enum
+-LEGAL_CHARACTERS: String
+--
+&lt;&lt;Constructor&gt;&gt;
++PlayerLobby():void
++addPlayer(name:String):NameValidation
++removePlayer(name:String):void
++isValid(name:String):boolean
++isTaken(name:String):boolean
++getPlayer(name:String):Player
++getPlayerCount():int
++getPlayerNames():Collection&lt;String&gt;
++getCurrentPlayers():Collection&lt;Player&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>140</y>
+      <w>196</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>AIPlayer
+--
+-DEFAULT_NAME: String
+-FILENAME:String
++UID:String
+-name:String
+--
+&lt;&lt;Constructor&gt;&gt;
++AIPlayer()
+-generateName():String
++getName():String
++getUID():String
++makeMove(gameLCheckersGame):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>322</y>
+      <w>238</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract Class&gt;&gt;
+Player
+--
+-board:BoardView
+-gameHasEnded:boolean
+--
++setBoardView(bv:BoardView):void
++getBoardView():BoardView
++getGameOver():boolean
++setGameOver(isOver:boolean):void
++isInGame():boolean
++getName():String
++hashCode():int
++equals(that:Object):boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>301</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>294</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>511</y>
+      <w>210</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>BoardView
+--
+-rows:Row[]
+--
+&lt;&lt;Constructor&gt;&gt;
++BoardView()
++setRow(spaces:Space[], rowNumber:int):void
++setRow(row:Row, rowNumber:int):void
++iterator():Iterator&lt;Row&gt;
++getRow(index:int):Row
++getLength():int
++flipBoard():BoardView
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>693</y>
+      <w>203</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>BoardViewIterator
+--
+-rows:Row[]
+-index:int
+--
+&lt;&lt;Constructor&gt;&gt;
++BoardViewIterator(boardView:BoardView)
++hasNext():boolean
++next():Row</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>651</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>707</x>
+      <y>196</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>UserPlayer
+--
+-name:String
+--
+&lt;&lt;Constructor&gt;&gt;
++UserPlayer(name:String)
++getName():String
++setName(name:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>273</y>
+      <w>112</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>511</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Move
+--
+-start: Position
+-end: Position
+--
+&lt;&lt;Constructor&gt;&gt;
++Move(start: Position, end: Position)
++getStart(): Position
++getEnd(): Position
++isDiagonal(): boolean
++isForwardMove(): boolean
++isValid(): boolean
++isSingleSpace(): boolean
++isJump(): boolean
++getMidPoint(): Position
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>714</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>721</x>
+      <y>749</y>
+      <w>210</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Position
+--
+-row: int
+-cell: int
+--
+&lt;&lt;Constructor&gt;&gt;
++Position(row: int, cell: int)
++getRow(): int
++getCell(): int
++isOnBoard(): boolean
++toString(): String
++equals(that:Object):boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>476</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;30.0;150.0;30.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>833</y>
+      <w>217</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>Space
+--
+-cellIdx:int
+-isBlack:boolean
+-piece:Piece
+--
+&lt;&lt;Constructor&gt;&gt;
++Space(cellIdx:int, piece:Piece, isBlack:boolean)
++getCellIdx():int
++isValid():boolean
++setPiece(piece:Piece):void
++getPiece():Piece
++toString():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>595</y>
+      <w>49</w>
+      <h>322</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0;10.0;440.0;50.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>896</y>
+      <w>189</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Row
+--
+-index:int
+-spaces:Space[]
+--
+&lt;&lt;Constructor&gt;&gt;
++Row(spaces:Space[], index:int)
++iterator():Iterator&lt;Space&gt;
++getIndex(index:int):int
++getSpace(index:int):Space
++getLength():int
++flipRow():Row
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>1085</y>
+      <w>126</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>RowIterator
+--
+-row:Row
+-index:int
+--
+&lt;&lt;Constructor&gt;&gt;
++RowIterator(row:Row)
++hasNext():boolean
++next():Space</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>1022</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>546</y>
+      <w>315</w>
+      <h>532</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0;10.0;740.0;430.0;740.0;430.0;690.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>1106</y>
+      <w>175</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Piece
+--
++Type:enum
++Color:enum
+-myType:Type
+-myColor:Color
+--
+&lt;&lt;Constructor&gt;&gt;
++Piece(myType:Type, myColor:Color)
++getType():Type
++makeKing():void
++getColor():Color
++tostring():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>1288</y>
+      <w>336</w>
+      <h>567</h>
+    </coordinates>
+    <panel_attributes>CheckersGame
+--
+-DIM:int
+-board:Space[][]
+-redPlayer:Player
+-whitePlayer: Player
+-currentTurn:Color
+-resigner:Player
+-moveQueue:Deque&lt;Move&gt;
+-redPiecesCount:int
+-whitePiecesCount:int
+-playerHasAvailableMoves:boolean
+-playerCanJump:boolean
+-gameID:int
+-gameManager:GameManager
+-moveCount:int
+-INVALID_MOVE_SINGLE_SPACE:String
+-INVALID_MOVE_AFTER_JUMP:String
+-INVALID_MOVE_SINGLE_FORWARD:String
+-INVALID_MOVE_FORCE_JUMP:String
+-INVALID_MOVE_GENERAL:String
+-SUBMIT_QUEUE_EMPTY:String
+-SUBMIT_CAN_STILL_MOVE:String
+-UNDO_LAST:String
+-PLAYER_RESIGNED:String
+-NO_PIECES:String
+-NO_MOVES:String
+--
+&lt;&lt;Constructor&gt;&gt;
++CheckersGame(p1:Player, p2:Player, id:int, manager:GameManager)
++getRedPlayer():Player
++getWhitePlayer():Player
++currentTurn():Color
++getID():int
++getMoveCount():int
++getBoardView():BoardView
++validateMove(move:Move):String
++canStillMakeMove():boolean
+-canDoJump(pos:Position, pastPos:Position, piece:Piece):Move
+-canDoSingle(pos:Position, pastPos:Position, piece:Piece):Move
++submit():String
++applyMove(move:Move):void
++undoMove():String
++resign(player:Player):void
++setGameOver():void
++hasGameEnded():String
++checkMovesAreAvailable(playerColor:Color):boolean
++getNextValidJump():Move
++getValidMoves():List&lt;Move&gt;
++printBoard():void
++toString():String
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>392</y>
+      <w>203</w>
+      <h>1078</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>30.0;10.0;270.0;10.0;270.0;1520.0;10.0;1520.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>1239</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>245</y>
+      <w>84</w>
+      <h>1134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;1600.0;100.0;1600.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>630</y>
+      <w>217</w>
+      <h>854</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>210.0;10.0;290.0;10.0;290.0;1200.0;10.0;1200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>791</y>
+      <w>231</w>
+      <h>707</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>210.0;10.0;310.0;10.0;310.0;990.0;10.0;990.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>574</y>
+      <w>84</w>
+      <h>819</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0;10.0;1150.0;90.0;1150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1295</x>
+      <y>119</y>
+      <w>406</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>GetSpecatateGameRoute
+--
+-LOG:Logger
++INVALID_GAME_MSG:String
+-templateEngine:TemplateEngine
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSpectateGameRoute(templateEngine:TemplateEngine, gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1715</x>
+      <y>140</y>
+      <w>294</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>GetSpectateStopWatchingRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSpectateStopWatchingRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1295</x>
+      <y>266</y>
+      <w>287</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>PostSpectateCheckTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
++MOVE_COUNT_KEY:String
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSpectateCheckTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1603</x>
+      <y>266</y>
+      <w>378</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>GetGameRoute
+--
+-LOG:Logger
++ViewMode:enum
++ATTR_TITLE:String
++ATTR_CURRENT_USER:String
++ATTR_VIEW_MODE:String
++ATTR_MODE_OPTIONS:String
++ATTR_RED_PLAYER:String
++ATTR_WHITE_PLAYER:String
++ATTR_ACTIVE_COLOR:String
++ATTR_BOARD:String
++ATTR_MESSAGE:String
++TITLE:String
++GAME_VIEW:String
+-templateEngine:TemplateEngine
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetGameRoute(templateEngine:TemplateEngine, gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>539</y>
+      <w>497</w>
+      <h>301</h>
+    </coordinates>
+    <panel_attributes>GetHomeRoute
+--
+-LOG:Logger
++WELCOME_MSG:Message
++ATTR_TITLE:String
++ATTR_MESSAGE:String
++ATTR_PLAYER_SIGNIN:String
++ATTR_NUM_PLAYERS:String
++ATTR_CURRENT_USER:String
++ATTR_PLAYER_LIST:String
++ATTR_GAME_LIST:String
++ATTR_ONE_PLAYER:String
++PLAYER_SESSION_KEY:String
++TIMEOUT_SESSION_KEY:String
++VIEW_NAME:String
++TITLE:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++GetGameRoute(templateEngine:TemplateEngine, gameManager:GameManager, playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1295</x>
+      <y>392</y>
+      <w>196</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>GetSignInRoute
+--
+-LOG:Logger
++TITLE:String
+-templateEngine:TemplateEngine
+--
+&lt;&lt;Constructor&gt;&gt;
++GetSignInRoute(templateEngine:TemplateEngine)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1813</x>
+      <y>539</y>
+      <w>196</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>PostBackUpMoveRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostBackUpMoveRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1813</x>
+      <y>763</y>
+      <w>196</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>PostCheckTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostCheckTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>854</y>
+      <w>483</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>PostHomeRoute
+--
+-LOG:Logger
+-START_ERROR:String
+-SPECTATE_ERROR:String
+-SPECTATE_MODE:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostHomeRoute(gameManager:GameManager,templateEngine:TemplateEngine,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1813</x>
+      <y>651</y>
+      <w>196</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>PostResignGameRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostResignGameRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>1022</y>
+      <w>385</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>PostSignInRoute
+--
+-LOG:Logger
+-VALID_ROUTE:String
+-INVALID_ROUTE:String
+-PLAYER_NAME_ATTR:String
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSignInRoute(templateEngine:TemplateEngine,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object
+-error(vm:Map&lt;String,Object&gt;,message:String):ModelAndView
+-valid(vm:Map&lt;String,Object&gt;):ModelAndView</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>1197</y>
+      <w>343</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>PostSignOutRoute
+--
+-LOG:Logger
++SIGNOUT_MSG:Message
+-playerLobby:PlayerLobby
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSignOutRoute(gameManager:GameManager,playerLobby:PlayerLobby)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1687</x>
+      <y>1022</y>
+      <w>252</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>PostSubmitTurnRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostSubmitTurnRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1687</x>
+      <y>1127</y>
+      <w>252</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>PostValidateMoveRoute
+--
+-LOG:Logger
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++PostValidateMoveRoute(gameManager:GameManager)
++handle(request:Request, response:Response):Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>1330</y>
+      <w>511</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>WebServer
+--
+-LOG:Logger
++HOME_URL
++SIGNIN_URL
++SIGNOUT_URL
++GAME_URL
++VALIDATE_MOVE_URL
++SUBMIT_TURN_URL
++BACKUP_MOVE_URL
++RESIGN_GAME_URL
++CHECK_TURN_URL
++SPECTATE_GAME_URL
++SPECTATE_STOP_WATCHING_URL
++SPECTATE_CHECK_TURN_URL
+-templateEngine:TemplateEngine
+-playerLobby:PlayerLobby
+-gson:Gson
+-gameManager:GameManager
+--
+&lt;&lt;Constructor&gt;&gt;
++WebServer(gameManager:GameManager,playerLobby:PlayerLobby,gson:Gson,templateEngine:TemplateEngine)
++initialize():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>469</y>
+      <w>189</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>217</y>
+      <w>196</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>260.0;240.0;70.0;240.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>231</y>
+      <w>469</w>
+      <h>1225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>650.0;1730.0;10.0;1730.0;10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>35</y>
+      <w>987</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;1310.0;10.0;1310.0;170.0;1390.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>35</y>
+      <w>581</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;810.0;10.0;810.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>147</y>
+      <w>77</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0;90.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>294</y>
+      <w>385</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;530.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>371</y>
+      <w>77</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;420.0;90.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>658</y>
+      <w>70</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0;80.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>840</y>
+      <w>595</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;830.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1785</x>
+      <y>714</y>
+      <w>42</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1785</x>
+      <y>581</y>
+      <w>42</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1792</x>
+      <y>840</y>
+      <w>21</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1792</x>
+      <y>910</y>
+      <w>224</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>210.0;330.0;300.0;330.0;300.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>924</y>
+      <w>70</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;730.0;80.0;730.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>1246</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>63</y>
+      <w>931</w>
+      <h>595</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;430.0;10.0;390.0;70.0;390.0;70.0;10.0;1210.0;10.0;1210.0;830.0;1310.0;830.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1211</x>
+      <y>637</y>
+      <w>91</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;400.0;110.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1211</x>
+      <y>910</y>
+      <w>91</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0;110.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1211</x>
+      <y>1120</y>
+      <w>91</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;110.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1211</x>
+      <y>1225</y>
+      <w>91</w>
+      <h>287</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0;110.0;390.0</additional_attributes>
+  </element>
+</diagram>

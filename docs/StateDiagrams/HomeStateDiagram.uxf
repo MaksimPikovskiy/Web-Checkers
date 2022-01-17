@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;581&lt;/x&gt;&lt;y&gt;100&lt;/y&gt;&lt;w&gt;320&lt;/w&gt;&lt;h&gt;70&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;POST"/game" [Valid Challenge] /Render Game page
+style=wordwrap&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;571&lt;/x&gt;&lt;y&gt;60&lt;/y&gt;&lt;w&gt;30&lt;/w&gt;&lt;h&gt;170&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=-&amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;150;10;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;590&lt;/x&gt;&lt;y&gt;78&lt;/y&gt;&lt;w&gt;320&lt;/w&gt;&lt;h&gt;70&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;GET"/game" [Player Signed In] /Render Game page
+style=wordwrap&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;550&lt;/x&gt;&lt;y&gt;58&lt;/y&gt;&lt;w&gt;30&lt;/w&gt;&lt;h&gt;170&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=-&amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;150;10;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;600&lt;/x&gt;&lt;y&gt;317&lt;/y&gt;&lt;w&gt;240&lt;/w&gt;&lt;h&gt;70&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;POST"/signout" /Render home page
+style=wordwrap&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;570&lt;/x&gt;&lt;y&gt;267&lt;/y&gt;&lt;w&gt;70&lt;/w&gt;&lt;h&gt;60&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=-&amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;10;40;50;40;50;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLState&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;490&lt;/x&gt;&lt;y&gt;37&lt;/y&gt;&lt;w&gt;150&lt;/w&gt;&lt;h&gt;50&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Game Page&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes
+&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;600&lt;/x&gt;&lt;y&gt;317&lt;/y&gt;&lt;w&gt;240&lt;/w&gt;&lt;h&gt;70&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;POST"/signout" /Render home page
+style=wordwrap&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;570&lt;/x&gt;&lt;y&gt;267&lt;/y&gt;&lt;w&gt;70&lt;/w&gt;&lt;h&gt;60&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=-&amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;10;40;50;40;50;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLState&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;490&lt;/x&gt;&lt;y&gt;37&lt;/y&gt;&lt;w&gt;150&lt;/w&gt;&lt;h&gt;50&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Game Page&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;600&lt;/x&gt;&lt;y&gt;317&lt;/y&gt;&lt;w&gt;240&lt;/w&gt;&lt;h&gt;70&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;POST"/signout" /Render home page
+style=wordwrap&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;570&lt;/x&gt;&lt;y&gt;267&lt;/y&gt;&lt;w&gt;70&lt;/w&gt;&lt;h&gt;60&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=-&amp;gt;&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;10;40;50;40;50;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLState&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;490&lt;/x&gt;&lt;y&gt;37&lt;/y&gt;&lt;w&gt;150&lt;/w&gt;&lt;h&gt;50&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Game Page&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Text&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;600&lt;/x&gt;&lt;y&gt;317&lt;/y&gt;</help_text>
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>275</x>
+      <y>550</y>
+      <w>44</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>561</y>
+      <w>132</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>979</x>
+      <y>814</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Sign-In Page</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>594</x>
+      <y>550</y>
+      <w>231</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>GET"/" /Render Home Page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>418</x>
+      <y>550</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>No HTTP Connection</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>583</y>
+      <w>385</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>20.0;230.0;330.0;230.0;330.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1485</x>
+      <y>671</y>
+      <w>352</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>POST"/"[Valid login] /Render Home page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>594</y>
+      <w>33</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>572</y>
+      <w>407</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>957</x>
+      <y>539</y>
+      <w>176</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Home Page</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1067</x>
+      <y>726</y>
+      <w>231</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>GET"/signin" /Render Sign-In page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>979</x>
+      <y>253</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Game Page</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1012</x>
+      <y>330</y>
+      <w>264</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>POST"/" [Player Signed In &amp;&amp; Valid Challenge against Player or AI] /Redirect "/game"
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>275</y>
+      <w>165</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;220.0;130.0;220.0;130.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1067</x>
+      <y>594</y>
+      <w>77</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;50.0;40.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1100</x>
+      <y>649</y>
+      <w>264</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>POST"/signout" /Render home page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>616</x>
+      <y>396</y>
+      <w>275</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>POST"/signout" /Render home page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>858</y>
+      <w>154</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;120.0;120.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>979</x>
+      <y>1012</y>
+      <w>297</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>POST"/signin"[Invalid login] /Render Sign-In page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>594</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>968</x>
+      <y>660</y>
+      <w>66</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1056</x>
+      <y>506</y>
+      <w>55</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>30.0;30.0;30.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1089</x>
+      <y>495</y>
+      <w>264</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>POST"/" [Invalid Challenge] /Render home page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1001</x>
+      <y>297</y>
+      <w>33</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1023</x>
+      <y>165</y>
+      <w>319</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>90.0;80.0;90.0;10.0;270.0;10.0;270.0;300.0;10.0;300.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1133</x>
+      <y>187</y>
+      <w>198</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>GET"/" [Player exits] /Render Home page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>209</y>
+      <w>55</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>30.0;40.0;30.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>913</x>
+      <y>176</y>
+      <w>198</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>GET"/game"/Render Game page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1562</x>
+      <y>253</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Spectate Page</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>297</y>
+      <w>539</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;260.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1397</x>
+      <y>308</y>
+      <w>231</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>GET"/spectator/stopWatching" [Player exits] / Render Home Page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>297</y>
+      <w>506</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;440.0;240.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1672</x>
+      <y>363</y>
+      <w>231</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>POST"/"[Player Signed in &amp;&amp; Valid Game ID]/Redirect "/spectator/game"
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1650</x>
+      <y>209</y>
+      <w>55</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>30.0;40.0;30.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1595</x>
+      <y>176</y>
+      <w>242</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>GET"/spectator/game"/Render Spectate page
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

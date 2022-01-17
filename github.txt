@@ -1,0 +1,37 @@
+commit 9e2b57e8b7be19dc96fd038c617a45df712132a5
+Author: smc6548 <smc6548@rit.edu>
+Date:   Sat Sep 25 23:45:20 2021 -0400
+
+    Added my name - Sean Clifford
+
+commit cf3e922d418b3d0044f1abc55c616c11033ae47a
+Author: WillH <willhagele@gmail.com>
+Date:   Sat Sep 25 15:19:31 2021 -0400
+
+    Added name (Will Hagele) to README
+
+commit 4191e4fe0572bdc50be1e0b59417906815740029
+Author: mjcreator <matthew-heller@comcast.net>
+Date:   Fri Sep 24 14:07:47 2021 -0400
+
+    Matthew Name added to README
+
+commit e2f9e0d5690092e288cd66e83b1a87c9f72c1113
+Author: Jack Milkovich <jam9558@rit.edu>
+Date:   Wed Sep 22 21:52:18 2021 -0400
+
+    "some commit message"
+
+commit 097525d35f2b755af0cc463389367b97ca954603
+Author: mp8671 <mp8671@g.rit.edu>
+Date:   Wed Sep 22 21:27:43 2021 -0400
+
+    Max added name to README.md
+    
+    Updated README.md to include my name in TEAM section
+
+commit bbaddf11a4ccc4269f3febfa6e94b5c2d5acaa64
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Wed Sep 22 22:31:37 2021 +0000
+
+    Initial commit

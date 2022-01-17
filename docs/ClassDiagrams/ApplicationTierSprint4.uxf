@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>680</y>
+      <w>470</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>PlayerLobby
+--
++NAME_TAKEN_MSG: String
++NAME_INVALID_MSG: String
+-currentPlayers: Map&lt;String, Player&gt;
++NameValidation: enum
+-LEGAL_CHARACTERS: String
+--
+&lt;&lt;Constructor&gt;&gt;
++PlayerLobby():void
++addPlayer(name:String):NameValidation
++removePlayer(name:String):void
++isValid(name:String):boolean
++isTaken(name:String):boolean
++getPlayer(name:String):Player
++getPlayerCount():int
++getPlayerNames():Collection&lt;String&gt;
++getCurrentPlayers():Collection&lt;Player&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>340</x>
+      <y>270</y>
+      <w>550</w>
+      <h>750</h>
+    </coordinates>
+    <panel_attributes>Application Tier
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>330</y>
+      <w>470</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>GameManager
+--
+-lobby: PlayerLobby
+-idCount: int
+-playerGameMap: HashMap&lt;Player, CheckersGame&gt;
+-gameIDMap: HashMap&lt;Integer, CheckersGame&gt;
+--
+&lt;&lt;Constructor&gt;&gt;
++GameManager(lobby:PlayerLobby)
++createGame(challenger: Player, opponentStr: String): CheckersGame
++getGame(player:Player): CheckersGame
++getGame(player:Player, gameID:int): CheckersGame
++getActiveGames():Collection&lt;String[]&gt;
++makeAIMove(currentPlayer:Player):void
++resign(resignPlayer:Player):boolean
++gameOver(game:CheckersGame): void
++quit(player:Player):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>450</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>440</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Model Tier&gt;&gt;
+CheckersGame</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>590</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>490</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Model Tier&gt;&gt;
+Player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>500</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>520</y>
+      <w>250</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0;230.0;270.0</additional_attributes>
+  </element>
+</diagram>

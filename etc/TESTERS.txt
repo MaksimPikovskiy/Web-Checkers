@@ -1,0 +1,8 @@
+1. Run "mvn compile exec:java" in the root project directory
+2. Open a browser to "localhost:4567"
+    The current project has both regular games and AI games so try testing both types of games.
+    There are two previous bugs that you should try to test for
+        1. If challenge a player and at some point during the game, the player waiting for their opponent to make a move 
+            resigns followed by the opponent resigning, then when the original challenger re-challenges the same opponent, 
+            then the opponent will never be taken to the game page.
+        2. Test the AI making a multi-jump with a king piece.

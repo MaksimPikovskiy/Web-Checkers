@@ -1,0 +1,40 @@
+stateDiagram-v2
+    Game: Game in Progress
+    [*] --> Game:  Player challenges another Player\n [AI Player UID]\n/Create new AI Player
+    
+    state Game {
+        Wait: Waiting for Turn
+        Move: Make Move
+
+        [*] --> Wait: Game Start /Player turn
+        Wait --> Wait: Player turn [Game not over] /Keep waiting
+        Wait --> Move: End of Player Turn [Game not over] /AI turn
+        Move --> Wait: End of AI turn [Game not over] /Player turn
+        Wait --> [*]: End of Player Turn [Game over] /End game
+
+        state Move {
+            Gen: Generate all Valid Moves
+            Test: Validate Move
+            Jump: Check for Possible Jumps
+            JumpTest: Multiple Jump
+
+            [*] --> Gen
+            Gen --> Test: Get move list [Available Moves > 0]\n/Select random move
+            
+            Test --> Test: Random move [Invalid move]\n/New random move
+            Test --> Jump: Random move [Valid move]\n/Submit move
+
+            Jump --> [*]: Get next jump [Valid jumps = 0] /End turn
+            Jump --> JumpTest: Get next jump [Valid jumps > 0] /Submit move
+
+            JumpTest --> JumpTest: Check jump\n[(Valid jumps > 0) & (Valid move)]\n/Submit move
+            JumpTest --> JumpTest: Check jump\n[(Valid jumps > 0) & (Invalid move)]\n/Check next jump
+            JumpTest --> [*]: Attempt next jump [Valid jumps = 0] /End turn
+
+            Gen --> [*]: Get move list [Available Moves = 0]\n/End turn
+        }
+
+        Move --> [*]: End of AI turn [Game over] /End game
+    }
+
+    Game --> [*]: Game Ended
